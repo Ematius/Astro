@@ -1,0 +1,32 @@
+---
+//esto es todo en tiempo de compilación, por eso en html ya sale sin código JS
+//frontMater
+// Aquí JS/TS
+//los componentes deben ser el primer string en mayúscula porque si no lo interpreta como componente de html
+
+import Layout from "../layouts/layout2.astro"
+import Comunicaciones from "../components/comunicaciones.astro"
+import Character from "../components/character.astro"
+import DATA from "../data/data.json"
+
+---
+
+<Layout>
+    <div class="app container">
+    <ul class="characters-list row list-unstyled">
+        {
+            DATA.map((item) => <Character character={item}/>)
+        }
+        
+    </ul>
+  </div>
+
+ <Comunicaciones />
+    
+</Layout>
+
+
+
+
+
+
