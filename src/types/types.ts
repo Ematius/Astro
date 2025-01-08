@@ -1,4 +1,4 @@
-
+export type Category = 'king' | 'fighter' | 'adviser' | 'squire'
 
 export type Char = {
   isAlive: boolean;
@@ -6,11 +6,11 @@ export type Char = {
   name: string;
   family: string;
   age: number;
-  reignYears: number;
-  category: string;
-  weapon?: undefined;
-  skillLevel?: undefined;
-  adviseTo?: undefined;
-  serveLevel?: undefined;
-  servesTo?: undefined;
+  category: Category;
+  reignYears?: number;
+  weapon?: string;
+  skillLevel?: number;
+  adviseTo?: Char;
+  serveLevel?: number;
+  servesTo?: Char;
 };
